@@ -1,7 +1,9 @@
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
-import usersRoutes from "./routes/users.js";
+import usersRoutes from "./routes/user.js";
+import eggRoutes from "./routes/egg.js";
+import henRoutes from "./routes/hen.js";
 import authRoutes from "./routes/auth.js";
 import { authenticateToken } from "./middlewares/auth.js";
 import dotenv from "dotenv";
@@ -15,7 +17,10 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/auth", authRoutes);
-app.use("/users", authenticateToken, usersRoutes);
+app.use("/user", authenticateToken, usersRoutes);
+app.use("/egg", eggRoutes);
+app.use("/hen", henRoutes);
+
 app.get("/", (req, res) => res.send("Hello World"));
 
 mongoose

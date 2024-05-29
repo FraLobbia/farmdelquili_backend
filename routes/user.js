@@ -5,11 +5,9 @@ import {
 	insertUser,
 	deleteUser,
 	updateUser,
-} from "../controllers/users.js";
+} from "../controllers/usersController.js";
 
 const router = express.Router();
-
-let users = [];
 
 router.get("/", getAllUsers);
 router.get("/:id", getUserById);

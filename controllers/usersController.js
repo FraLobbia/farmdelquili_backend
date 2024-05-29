@@ -1,7 +1,7 @@
 import express from "express";
 import { v4 as uuidv4 } from "uuid";
-import { User } from "../models/user.js";
 import mongoose from "mongoose";
+import User from "../models/user.js";
 
 const router = express.Router();
 
