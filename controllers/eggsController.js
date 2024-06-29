@@ -1,4 +1,5 @@
 import express from "express";
+import mongoose from "mongoose";
 import Egg from "../models/egg.js"; // Importa il modello Egg
 
 const router = express.Router();
